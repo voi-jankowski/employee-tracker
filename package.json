@@ -16,6 +16,7 @@
   "author": "Voi Jankowski",
   "license": "MIT",
   "dependencies": {
-    "inquirer": "^8.2.5"
+    "inquirer": "^8.2.5",
+    "mysql2": "^3.2.4"
   }
 }
