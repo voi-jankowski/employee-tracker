@@ -1,0 +1,48 @@
+INSERT INTO department (name)
+VALUES ("Head Office"),
+       ("Events"),
+       ("Event Sales"),
+       ("FOH"),
+       ("BOH");
+
+INSERT INTO role (title, salary, department_id)
+VALUES ("General Manager", 120000, 1),
+       ("Bar Manager", 75000, 4),
+       ("Head Chef", 90000, 5),
+       ("Sous Chef", 75000, 5),
+       ("Chef de Partie", 60000, 5),
+       ("Kitchen Porter", 50000, 5),
+       ("Bar Supervisor", 65000, 4),
+       ("Waiter", 60000, 4),
+       ("Runner", 50000, 4),
+       ("Events Manager", 90000, 2),
+       ("Events Coordinator", 75000, 2),
+       ("Sales Senior Manager", 90000, 3),
+       ("Sales Manager", 75000, 3);
+
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES ("Elliot", "Smith", 1, 1),
+       ("Amira", "Afzal", 2, 1),
+       ("Christoper", "Lee", 3, 1),
+       ("Verónica", "Rodriguez", 4, 3),
+       ("Igor", "Stein", 5, 3),
+       ("Xyla","Carrillo", 5, 3),
+        ("Quinlan","Berg", 5, 3),
+        ("Susan","Weber", 6, 3),
+        ("Edan","Velez", 6, 3),
+        ("Vincent","Sanders", 6, 3),
+        ("Austin","Hawkins", 7, 2),
+        ("Keefe","Leblanc", 7, 2),
+        ("Miranda","Head", 8, 2),
+        ("Beck","Hopper", 8, 2),
+        ("Wanda","Patton", 8, 2),
+        ("Maia","Cortez", 9, 2),
+        ("Whilemina","Sears", 9, 2),
+        ("Judah","Powell", 10, 1),
+        ("Lacy","Lowe", 11, 10),
+        ("Uriah","Floyd", 11, 10),
+        ("Mona","Bradford", 12, 1),
+        ("Xandra","Reeves", 13, 12),
+        ("Latifah","Howard", 13, 12),
+        ("Rebekah","Deleon", 5, 3),
+        ("Aurora","Sargent", 8, 2);
