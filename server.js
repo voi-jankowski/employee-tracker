@@ -1,36 +1,45 @@
-const express = require("express");
-const mysql = require("mysql2");
+const inquirer = require("inquirer");
 
-// Import and require user-input
-const { run } = require("./lib/user-input.js");
 
-const PORT = process.env.PORT || 3001;
-const app = express();
+const { viewDepartaments, viewRoles, viewEmployees } = require("./view.js");
+const { runDepartament } = require("./add-departament.js");
+const { runRole } = require("./add-role.js");
+const { runEmployee } = require("./add-employee.js");
+const { runUpdateEmployeeRole } = require("./update-employee-role.js");
 
-// Express middleware
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-
-// Connect to database
-const db = mysql.createConnection(
+// Array of questions for the user
+const startQuestion = [
   {
-    host: "localhost",
-    // MySQL username,
-    user: "root",
-    // TODO: Add MySQL password here
-    password: "Shire2023**",
-    database: "staff_db",
+    type: "list",
+    name: "task",
+    message: "What would you like to do?",
+    choices: [
+      "View all departments",
+      "View all roles",
+      "View all employees",
+      "Add a department",
+      "Add a role",
+      "Add an employee",
+      "Update an employee role",
+    ],
   },
-  console.log(`Connected to the staff_db database.`)
-);
+];
+
+// Create the main function that awaits the in put from the inquirer
+const run = async () => {
+  try {
+    const firstInput = await inquirer.prompt(startQuestion);
+    console.log(firstInput);
+    if ((firstInput.task = "View all departments")) return viewDepartaments();
+    if ((firstInput.task = "View all roles")) return viewRoles();
+    if ((firstInput.task = "View all employees")) return viewEmployees();
+    if ((firstInput.task = "Add a department")) runDepartament();
+    if ((firstInput.task = "Add a role")) runRole();
+    if ((firstInput.task = "Add an employee")) runEmployee();
+    if ((firstInput.task = "Update an employee role")) runUpdateEmployeeRole();
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 run();
-
-// Default response for any other request (Not Found)
-app.use((req, res) => {
-  res.status(404).end();
-});
-
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
