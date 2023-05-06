@@ -1,11 +1,10 @@
 const inquirer = require("inquirer");
 
-
-const { viewDepartaments, viewRoles, viewEmployees } = require("./view.js");
-const { runDepartament } = require("./add-departament.js");
-const { runRole } = require("./add-role.js");
-const { runEmployee } = require("./add-employee.js");
-const { runUpdateEmployeeRole } = require("./update-employee-role.js");
+const { viewDepartaments, viewRoles, viewEmployees } = require("./lib/view.js");
+const { runDepartament } = require("./lib/add-departament.js");
+const { runRole } = require("./lib/add-role.js");
+const { runEmployee } = require("./lib/add-employee.js");
+const { runUpdateEmployeeRole } = require("./lib/update-employee-role.js");
 
 // Array of questions for the user
 const startQuestion = [
@@ -43,3 +42,4 @@ const run = async () => {
 };
 
 run();
+module.exports = { run };
