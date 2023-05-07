@@ -1,5 +1,6 @@
 const inquirer = require("inquirer");
 
+// Import and require all the functions for different choices in the first user prompt.
 const { viewDepartaments, viewRoles, viewEmployees } = require("./lib/view.js");
 const { runDepartament } = require("./lib/add-departament.js");
 const { runRole } = require("./lib/add-role.js");
@@ -24,7 +25,7 @@ const startQuestion = [
   },
 ];
 
-// Create the main function that awaits the in put from the inquirer
+// Create the main function that awaits the in put from the inquirer and calls a relevant function based on the user input
 const run = async () => {
   try {
     const firstInput = await inquirer.prompt(startQuestion);
@@ -59,15 +60,24 @@ const run = async () => {
         break;
 
       case "Add a role":
-        runRole();
+        await runRole();
+        setTimeout(() => {
+          run();
+        }, 1000);
         break;
 
       case "Add an employee":
-        runEmployee();
+        await runEmployee();
+        setTimeout(() => {
+          run();
+        }, 1000);
         break;
 
       case "Update an employee role":
-        runUpdateEmployeeRole();
+        await runUpdateEmployeeRole();
+        setTimeout(() => {
+          run();
+        }, 1000);
         break;
     }
   } catch (error) {
