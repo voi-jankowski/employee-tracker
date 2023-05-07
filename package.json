@@ -17,6 +17,7 @@
   "license": "MIT",
   "dependencies": {
     "inquirer": "^8.2.5",
-    "mysql2": "^3.2.4"
+    "mysql2": "^3.2.4",
+    "path": "^0.12.7"
   }
 }

@@ -29,17 +29,45 @@ const run = async () => {
   try {
     const firstInput = await inquirer.prompt(startQuestion);
     console.log(firstInput);
-    if ((firstInput.task = "View all departments")) return viewDepartaments();
-    if ((firstInput.task = "View all roles")) return viewRoles();
-    if ((firstInput.task = "View all employees")) return viewEmployees();
-    if ((firstInput.task = "Add a department")) runDepartament();
-    if ((firstInput.task = "Add a role")) runRole();
-    if ((firstInput.task = "Add an employee")) runEmployee();
-    if ((firstInput.task = "Update an employee role")) runUpdateEmployeeRole();
+    switch (firstInput.task) {
+      case "View all departments":
+        viewDepartaments();
+        break;
+
+      case "View all roles":
+        viewRoles();
+        break;
+
+      case "View all employees":
+        viewEmployees();
+        break;
+
+      case "Add a department":
+        runDepartament();
+        break;
+
+      case "Add a role":
+        runRole();
+        break;
+
+      case "Add an employee":
+        runEmployee();
+        break;
+
+      case "Update an employee role":
+        runUpdateEmployeeRole();
+        break;
+    }
+    // if ((firstInput.task = "View all departments")) return viewDepartaments();
+    // if ((firstInput.task = "View all roles")) return viewRoles();
+    // if ((firstInput.task = "View all employees")) return viewEmployees();
+    // if ((firstInput.task = "Add a department")) runDepartament();
+    // if ((firstInput.task = "Add a role")) runRole();
+    // if ((firstInput.task = "Add an employee")) runEmployee();
+    // if ((firstInput.task = "Update an employee role")) runUpdateEmployeeRole();
   } catch (error) {
     console.log(error);
   }
 };
 
 run();
-module.exports = { run };
