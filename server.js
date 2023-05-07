@@ -1,11 +1,18 @@
 const inquirer = require("inquirer");
 
 // Import and require all the functions for different choices in the first user prompt.
-const { viewDepartaments, viewRoles, viewEmployees } = require("./lib/view.js");
-const { runDepartament } = require("./lib/add-departament.js");
-const { runRole } = require("./lib/add-role.js");
-const { runEmployee } = require("./lib/add-employee.js");
-const { runUpdateEmployeeRole } = require("./lib/update-employee-role.js");
+const {
+  viewDepartaments,
+  viewRoles,
+  viewEmployees,
+} = require("./lib/view/view.js");
+const { runDepartament } = require("./lib/add/add-departament.js");
+const { runRole } = require("./lib/add/add-role.js");
+const { runEmployee } = require("./lib/add/add-employee.js");
+const {
+  runUpdateEmployeeRole,
+} = require("./lib/update/update-employee-role.js");
+const { runUpdateEmployeeManager } = require("./lib/update/update-manager.js");
 
 // Array of questions for the user
 const startQuestion = [
