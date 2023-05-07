@@ -20,7 +20,12 @@ const startQuestion = [
       "Add a department",
       "Add a role",
       "Add an employee",
-      "Update an employee role",
+      "Update employee role",
+      "Update employee manager",
+      "View employees by manager",
+      "View employees by department",
+      "Delete department, role or employee",
+      "View the total utilized budget of a department",
     ],
   },
 ];
@@ -73,8 +78,43 @@ const run = async () => {
         }, 1000);
         break;
 
-      case "Update an employee role":
+      case "Update employee role":
         await runUpdateEmployeeRole();
+        setTimeout(() => {
+          run();
+        }, 1000);
+        break;
+
+      case "Update employee manager":
+        await runUpdateEmployeeManager();
+        setTimeout(() => {
+          run();
+        }, 1000);
+        break;
+
+      case "View employees by manager":
+        await viewEmployeesByManager();
+        setTimeout(() => {
+          run();
+        }, 1000);
+        break;
+
+      case "View employees by department":
+        await viewEmployeesByDepartment();
+        setTimeout(() => {
+          run();
+        }, 1000);
+        break;
+
+      case "Delete department, role or employee":
+        await runDeleteOptions();
+        setTimeout(() => {
+          run();
+        }, 1000);
+        break;
+
+      case "View the total utilized budget of a department":
+        await viewDepBudget();
         setTimeout(() => {
           run();
         }, 1000);
