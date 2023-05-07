@@ -31,28 +31,31 @@ const run = async () => {
     console.log(firstInput);
     switch (firstInput.task) {
       case "View all departments":
-        viewDepartaments();
+        await viewDepartaments();
         setTimeout(() => {
           run();
         }, 1000);
         break;
 
       case "View all roles":
-        viewRoles();
+        await viewRoles();
         setTimeout(() => {
           run();
         }, 1000);
         break;
 
       case "View all employees":
-        viewEmployees();
+        await viewEmployees();
         setTimeout(() => {
           run();
         }, 1000);
         break;
 
       case "Add a department":
-        runDepartament();
+        await runDepartament();
+        setTimeout(() => {
+          run();
+        }, 1000);
         break;
 
       case "Add a role":
