@@ -32,14 +32,23 @@ const run = async () => {
     switch (firstInput.task) {
       case "View all departments":
         viewDepartaments();
+        setTimeout(() => {
+          run();
+        }, 1000);
         break;
 
       case "View all roles":
         viewRoles();
+        setTimeout(() => {
+          run();
+        }, 1000);
         break;
 
       case "View all employees":
         viewEmployees();
+        setTimeout(() => {
+          run();
+        }, 1000);
         break;
 
       case "Add a department":
@@ -58,13 +67,6 @@ const run = async () => {
         runUpdateEmployeeRole();
         break;
     }
-    // if ((firstInput.task = "View all departments")) return viewDepartaments();
-    // if ((firstInput.task = "View all roles")) return viewRoles();
-    // if ((firstInput.task = "View all employees")) return viewEmployees();
-    // if ((firstInput.task = "Add a department")) runDepartament();
-    // if ((firstInput.task = "Add a role")) runRole();
-    // if ((firstInput.task = "Add an employee")) runEmployee();
-    // if ((firstInput.task = "Update an employee role")) runUpdateEmployeeRole();
   } catch (error) {
     console.log(error);
   }
