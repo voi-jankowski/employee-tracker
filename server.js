@@ -18,6 +18,7 @@ const {
   viewEmployeesByDepartment,
 } = require("./lib/view/view-by-departament.js");
 const { runDeleteOptions } = require("./lib/delete.js");
+const { runviewDepBudget } = require("./lib/view/view-budget.js");
 
 // Array of questions for the user
 const startQuestion = [
@@ -126,7 +127,7 @@ const run = async () => {
         break;
 
       case "View the total utilized budget of a department":
-        await viewDepBudget();
+        await runviewDepBudget();
         setTimeout(() => {
           run();
         }, 1000);
