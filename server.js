@@ -14,6 +14,9 @@ const {
 } = require("./lib/update/update-employee-role.js");
 const { runUpdateEmployeeManager } = require("./lib/update/update-manager.js");
 const { viewEmployeesByManager } = require("./lib/view/view-by-manager.js");
+const {
+  viewEmployeesByDepartment,
+} = require("./lib/view/view-by-departament.js");
 
 // Array of questions for the user
 const startQuestion = [
