@@ -17,6 +17,7 @@ const { viewEmployeesByManager } = require("./lib/view/view-by-manager.js");
 const {
   viewEmployeesByDepartment,
 } = require("./lib/view/view-by-departament.js");
+const { runDeleteOptions } = require("./lib/delete.js");
 
 // Array of questions for the user
 const startQuestion = [
