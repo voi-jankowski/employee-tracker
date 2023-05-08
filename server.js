@@ -20,7 +20,7 @@ const {
 const { runDeleteOptions } = require("./lib/delete.js");
 const { runviewDepBudget } = require("./lib/view/view-budget.js");
 
-// Array of questions for the user
+// The first prompt for the user
 const startQuestion = [
   {
     type: "list",
