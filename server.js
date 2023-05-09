@@ -47,7 +47,6 @@ const startQuestion = [
 const run = async () => {
   try {
     const firstInput = await inquirer.prompt(startQuestion);
-    console.log(firstInput);
     switch (firstInput.task) {
       case "View all departments":
         await viewDepartaments();
