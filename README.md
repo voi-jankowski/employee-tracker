@@ -46,6 +46,8 @@ You will be presented with a list of options for the tasks you might want to per
 
 Depending on the chosen option you might be asked some additional questions to set the parameters for your task. If it's the list of options, select one like in the initial prompt. If you are asked for a name of employee, department or role, type out the requested name. If you leave those blank you will be redirected to the start to provide that input to make sure all the input is provided.
 
+When choosing or updateing the manager for an employee you will be presented with the list of all the employees to assign as managers with the extra option of `none` if you are saving a General Manager or any possible employee that doesn't report to a manager. When you later view them on the list of employees, you will see NULL in their manager field.
+
 ![First prompts.](./assets/img/tracker-2.png)
 
 When you select one of the `view` tasks, you will be presented with the table with the results of your search.

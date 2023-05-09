@@ -16,6 +16,7 @@
   "author": "Voi Jankowski",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "inquirer": "^8.2.5",
     "mysql2": "^3.2.4",
     "path": "^0.12.7"
