@@ -98,6 +98,6 @@ The method to run sql queries from separqte sql file sourced from [John Kolo](ht
 
 The location of the project [on GitHub](https://github.com/voi-jankowski/employee-tracker).
 
-The walkthrough video can be accessed on [here](https://drive.google.com/file/d/15-OeCr41gL0kB4s6pmHtnzjDfuzGc28C/view).
+The walkthrough video can be accessed on [here](https://drive.google.com/file/d/1NF7FVWBMCj04XLL_RUYuRwDLbTGPOLmZ/view).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
